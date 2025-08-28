@@ -54,4 +54,9 @@ class User extends Authenticatable
      * @return HasMany
      * */
 
+    public function sector(): HasMany
+    {
+        return $this->hasMany(Sector::class, 'user_id');
+    }
+
 }
